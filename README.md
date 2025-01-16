@@ -17,7 +17,7 @@ Let me introduce myself, I’m Ogbodogbo Fortune. On this occasion, I’d like t
 - SweetAlert2  
 
 **Website Link:**  
-[https://www.eki.my.id/](https://www.eki.my.id/)  
+[https://portfolio-seven-rho-75.vercel.app/](https://portfolio-seven-rho-75.vercel.app/)  
 
 We would appreciate it if you decide to use this project. Please include credit when using it. Thank you! 🙏  
 
@@ -39,7 +39,7 @@ Ensure that you have already installed:
 1. **Download this project:**  
 
    ```bash  
-   git clone https://github.com/EkiZR/Portofolio_V5.git  
+   git clone git@github.com:Fortunejite/portfolio.git  
    ```  
 
 2. **Install all dependencies:**  
