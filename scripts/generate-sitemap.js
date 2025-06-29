@@ -2,11 +2,13 @@ import { SitemapStream, streamToPromise } from 'sitemap';
 import { createWriteStream } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { db } from '../src/firebase.js';
+import { collection, db } from '../src/firebase.js';
+import { getDocs } from 'firebase/firestore';
 
 async function buildSitemap() {
   // 1. Grab project IDs
-  const snapshot = await db.collection('projects').get();
+  const projectCollection = collection(db, 'projects');
+  const snapshot = await getDocs(projectCollection);
   const projectData = snapshot.docs.map((doc) => ({ id: doc.id }));
 
   // 2. Build pages array, static + dynamic
