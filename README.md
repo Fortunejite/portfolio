@@ -19,8 +19,6 @@ Let me introduce myself, I’m Ogbodogbo Fortune. On this occasion, I’d like t
 **Website Link:**  
 [https://portfolio-seven-rho-75.vercel.app/](https://portfolio-seven-rho-75.vercel.app/)  
 
-We would appreciate it if you decide to use this project. Please include credit when using it. Thank you! 🙏  
-
 ---
 
 # Tutorial: Running the Project  
