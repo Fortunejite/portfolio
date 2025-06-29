@@ -1,19 +1,19 @@
 import { SitemapStream, streamToPromise } from 'sitemap';
-import { createWriteStream }           from 'fs';
-import { resolve, dirname }            from 'path';
-import { fileURLToPath }               from 'url';
-import { db } from '../src/firebase';
+import { createWriteStream } from 'fs';
+import { resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
+import { db } from '../src/firebase.js';
 
 async function buildSitemap() {
   // 1. Grab project IDs
   const snapshot = await db.collection('projects').get();
-  const projectData = snapshot.docs.map(doc => ({ id: doc.id }));
+  const projectData = snapshot.docs.map((doc) => ({ id: doc.id }));
 
   // 2. Build pages array, static + dynamic
   const pages = [
-    { url: '/', changefreq: 'daily',    priority: 1.0 },
+    { url: '/', changefreq: 'daily', priority: 1.0 },
     { url: '/about', changefreq: 'monthly', priority: 0.7 },
-    ...projectData.map(p => ({
+    ...projectData.map((p) => ({
       url: `/project/${p.id}`,
       changefreq: 'weekly',
       priority: 0.8,
@@ -26,7 +26,7 @@ async function buildSitemap() {
   });
 
   const __filename = fileURLToPath(import.meta.url);
-  const __dirname  = dirname(__filename);
+  const __dirname = dirname(__filename);
   const writeStream = createWriteStream(
     resolve(__dirname, '../public/sitemap.xml'),
   );
