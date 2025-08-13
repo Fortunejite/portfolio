@@ -1,0 +1,6 @@
+# Allow Googlebot and all others
+User-agent: *
+Disallow:
+
+# Sitemap location
+Sitemap: https://portfolio-seven-rho-75.vercel.app/sitemap.xml
