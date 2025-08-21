@@ -24,7 +24,7 @@ async function buildSitemap() {
 
   // 3. Create sitemap stream + write out once
   const sitemap = new SitemapStream({
-    hostname: 'https://portfolio-seven-rho-75.vercel.app',
+    hostname: 'https://fortunecodes.tech',
   });
 
   const __filename = fileURLToPath(import.meta.url);
