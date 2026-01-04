@@ -245,7 +245,7 @@ const AboutPage = () => {
 
             <div className='flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full'>
               <a
-                href='https://drive.google.com/drive/folders/1OtGSRSSnz1sn6yhvThP1Wn2-3sEA0b_u'
+                href='https://www.fortunecodes.tech/resume.pdf'
                 target='_blank'
                 className='w-full lg:w-auto'
               >
